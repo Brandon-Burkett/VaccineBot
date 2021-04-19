@@ -27,9 +27,7 @@ async def vaccineCheck():
             if item['status'] != 'Fully Booked':
                 await channel.send('@everyone')
                 await channel.send(item['city'] + ": " + item['status'])
-            else:
-                await channel.send("All locations Fully Booked")
-            # await channel.send(item['city'] + ": " + item['status'])
+            await channel.send(item['city'] + ": " + item['status'])
             print(item['city'] + ": " + item['status'])
 
 
